@@ -5,7 +5,6 @@ body {
   font-family: 'ABeeZee', sans-serif;
   background: url('../images/pillen hg.png') no-repeat center center fixed;
   background-size: cover;
-  display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
@@ -28,6 +27,7 @@ h1 {
   padding: 40px;
   margin-left: 20px;
   margin-right: 20px;
+  margin-top: 20px;
   width: 1fr;
   box-sizing: border-box;
   flex-direction: column;
@@ -81,7 +81,7 @@ input {
   margin-top: 12px;
   margin-left: 20px;
   margin-right: 20px;
-  width: 1fr;
+  min-width: calc(100% - 40px);  
   padding-top: 14px;
   padding-bottom: 14px;
   background-color: #674021;
