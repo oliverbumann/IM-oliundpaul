@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <title>Medikament hinzufügen</title>
+  <script src="medis_hinzufügen.js" defer></script>
+</head>
+<body>
+
+  <h1>Neues Medikament hinzufügen</h1>
+
+  <form id="medForm">
+    <label for="name">Medikamentenname:</label><br />
+    <input type="text" id="name" required /><br /><br />
+
+    <label for="frequency">Frequenz:</label><br />
+    <select id="frequency" required>
+      <option value="täglich">täglich</option>
+      <option value="wöchentlich">wöchentlich</option>
+      <option value="monatlich">monatlich</option>
+    </select><br /><br />
+
+    <label for="start_date">Startdatum & Uhrzeit:</label><br />
+    <input type="datetime-local" id="start_date" required /><br /><br />
+
+    <label for="urgency">Einzunehmen innerhalb von:</label><br />
+    <select id="urgency" required>
+      <option value="egal">egal</option>
+      <option value="1h">innerhalb 1h</option>
+      <option value="2h">innerhalb 2h</option>
+      <option value="3h">innerhalb 3h</option>
+    </select><br /><br />
+
+    <button type="submit">Medikament speichern</button>
+  </form>
+
+</body>
+</html>

@@ -8,11 +8,20 @@ document
     const username = document.querySelector("#username").value.trim();
     const email = document.querySelector("#email").value.trim();
     const password = document.querySelector("#password").value;
+    const passwordRepeat = document.querySelector("#passwordRepeat").value;
+
+    // ► Passwort-Vergleich
+    if (password !== passwordRepeat) {
+      alert("Die Passwörter stimmen nicht überein.");
+      return; // Formular nicht absenden
+    }
+
 
     const formData = new FormData();
     formData.append("username", username);
     formData.append("email", email);
     formData.append("password", password);
+    formData.append("passwordRepeat", passwordRepeat);
 
     try {
       const res = await fetch("api/register.php", {
