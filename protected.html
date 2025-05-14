@@ -1,31 +1,30 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Startseite</title>
-  <link rel="stylesheet" href="styles/protected.css" />
-  <link href="https://fonts.googleapis.com/css2?family=ABeeZee&display=swap" rel="stylesheet" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medikamentenübersicht</title>
+    <link rel="stylesheet" href="styles/protected.css">
 </head>
 <body>
 
-  <div id="date-header">
-    <h2 id="heute-datum">Dienstag, 29 April</h2>
-    <div id="wochentage-liste">
-      <span>Sa 26</span><span>So 27</span><span>Mo 28</span><span>Di 29</span><span>Mi 30</span><span>Do 1</span><span>Fr 2</span>
+    <p id="welcome-message"></p>
+    <button id="logout-button">Logout</button>
+
+    <div id="date-header">
+        <h2 id="heute-datum"></h2>
+        <div id="wochentage-liste"></div>
     </div>
-  </div>
 
-  <h3>Medikamente für den Tag:</h3>
-  <div id="medikamentenliste">
-    <!-- Medikamenteneinträge werden hier dynamisch erzeugt -->
-  </div>
+    <h3 style="text-align:center; color:#674021;">Medikamente für den Tag:</h3>
+    <div id="medikamentenliste"></div>
 
-  <div class="button-row">
-    <a href="medis_uebersicht.html">Icon</a>
-    <a href="medis_hinzufuegen.html">+</a>
-  </div>
+    <footer>
+        <button onclick="window.location.href='medis_hinzufügen.html'">➕ Hinzufügen</button>
+        <button onclick="window.location.href='medis_uebersicht.html'">🗂 Übersicht</button>
+    </footer>
 
-  <script src="protected.js"></script>
+    <script src="protected.js"></script>
+
 </body>
 </html>
