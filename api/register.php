@@ -18,8 +18,8 @@ if (strlen($email) < 5 || !filter_var($email, FILTER_VALIDATE_EMAIL)) {
     exit;
 }
 
-if (strlen($password) < 5) {
-    echo json_encode(['status' => 'error', 'message' => 'Das Passwort muss mindestens 5 Zeichen lang sein.']);
+if (strlen($password) < 6) {
+    echo json_encode(['status' => 'error', 'message' => 'Das Passwort muss mindestens 6 Zeichen lang sein.']);
     exit;
 }
 
