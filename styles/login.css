@@ -1,4 +1,7 @@
-/* Set font and background */
+/* login.css - identical to register.css for consistent design */
+
+@import url('https://fonts.googleapis.com/css2?family=ABeeZee&display=swap');
+
 body {
   margin: 0;
   padding: 0;
@@ -8,19 +11,17 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
+  display: flex;
 }
 
-
-/* Headline */
 h1 {
   color: white;
   font-size: 1.6rem;
   margin-bottom: 20px;
   text-align: center;
-  width: 100%; 
+  width: 100%;
 }
 
-/* Form box */
 .form-box {
   background-color: rgba(203, 175, 145, 0.9); /* #CBAF91 with opacity */
   border-radius: 20px;
@@ -35,13 +36,12 @@ h1 {
   display: flex;
 }
 
-/* Labels and Inputs */
 label {
   display: block;
   margin-bottom: 10px;
   color: white;
   font-size: 1rem;
- 
+  align-self: flex-start;
 }
 
 input {
@@ -56,34 +56,27 @@ input {
   box-sizing: border-box;
 }
 
-/* Submit Button */
 #brown-button {
   background-color: #674021;
   color: white;
   border: none;
   border-radius: 12px;
   padding: 14px;
-  width: min-content calc(100% - 40px);
+  width: 100%;
   font-size: 1.1rem;
   font-family: 'ABeeZee', sans-serif;
   cursor: pointer;
-  margin-left: 20px;
-  margin-right: 20px;
+  margin-bottom: 12px;
 }
 
-/* Button hover effect */
 #brown-button:hover {
   background-color: #54331b;
 }
 
 #brown-link-button {
   display: block;
-  margin-top: 12px;
-  margin-left: 20px;
-  margin-right: 20px;
-  width: min-content calc(100% - 40px); 
-  padding-top: 14px;
-  padding-bottom: 14px;
+  width: 100%;
+  padding: 14px 0;
   background-color: #674021;
   color: white;
   text-align: center;
@@ -99,29 +92,20 @@ input {
   background-color: #54331b;
 }
 
-
-/* Tablet */
 @media (min-width: 768px) {
   .form-box {
     padding: 30px;
     border-radius: 24px;
   }
-
   h1 {
     font-size: 2rem;
   }
 }
 
-/* Desktop */
 @media (min-width: 1024px) {
   body {
     background-attachment: fixed;
   }
-
-  .container {
-    max-width: 600px;
-  }
-
   h1 {
     font-size: 2.2rem;
   }
