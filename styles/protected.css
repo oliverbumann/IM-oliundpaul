@@ -1,3 +1,5 @@
+/* protected.css */
+
 @import url('https://fonts.googleapis.com/css2?family=ABeeZee&display=swap');
 
 body {
@@ -5,119 +7,116 @@ body {
   padding: 0;
   font-family: 'ABeeZee', sans-serif;
   background-color: #DABFA2;
-  display: flex;
-  flex-direction: column;
   min-height: 100vh;
 }
 
+.container {
+  padding: 20px;
+  max-width: 600px;
+  margin: 0 auto;
+  margin-top: 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 #welcome-message {
-  padding: 10px;
-  color: #674021;
-  text-align: center;
   font-size: 1.2rem;
+  margin-bottom: 20px;
+  color: #674021;
+  font-weight: bold;
 }
 
 #logout-button {
   background-color: #674021;
   color: white;
   border: none;
-  border-radius: 12px;
+  border-radius: 10px;
   padding: 10px 16px;
-  margin: 10px auto;
-  display: block;
   font-size: 1rem;
+  margin-bottom: 20px;
+  margin-top: -60px;
   cursor: pointer;
 }
 
-#logout-button:hover {
-  background-color: #54331b;
-}
-
-#date-header {
+.date-box {
   background-color: #674021;
   color: white;
-  padding: 20px;
-  border-bottom-left-radius: 30px;
-  border-bottom-right-radius: 30px;
-  text-align: center;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
-}
-
-#heute-datum {
-  margin: 0;
-  font-size: 1.3rem;
+  border-bottom-left-radius: 40px;
+  border-bottom-right-radius: 40px;
+  padding: 16px;
+  margin-bottom: 20px;
+  box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.2)
+  
 }
 
 #wochentage-liste {
-  margin-top: 10px;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   gap: 8px;
-  flex-wrap: wrap;
+  margin-top: 12px;
 }
 
 #wochentage-liste button {
-  background-color: #CBAF91;
-  border: none;
-  border-radius: 50%;
-  width: 48px;
-  height: 48px;
-  font-size: 0.85rem;
+  background-color: white;
   color: #674021;
+  border: none;
+  border-radius: 50%; /* macht ihn rund */
+  width: 40px;         /* gleiche Höhe und Breite */
+  height: 40px;
+  font-size: 1rem;
+  font-weight: bold;
   cursor: pointer;
+  transition: background 0.2s;
   display: flex;
   align-items: center;
   justify-content: center;
-  text-align: center;
-  padding: 0; /* wichtig, um zentrierte Texte zu erhalten */
+  padding: 30px; /* Padding entfernen, um die runde Form nicht zu verzerren */
 }
+
 
 #wochentage-liste button:hover {
-  background-color: #b49a7e;
+  background-color: #e0d3b6;
 }
 
-#medikamentenliste {
+.medikamenten-box {
   background-color: white;
-  margin: 20px;
-  border-radius: 20px;
-  padding: 20px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  border-radius: 16px;
+  padding: 16px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  margin-bottom: 30px;
 }
 
-#medikamentenliste div {
-  margin-bottom: 12px;
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 12px;
+.medikamenten-box div {
+  margin-bottom: 10px;
 }
 
-#medikamentenliste input[type="checkbox"] {
-  margin-top: 8px;
-}
-
-footer {
-  margin-top: auto;
-  background-color: #674021;
-  border-top-left-radius: 30px;
-  border-top-right-radius: 30px;
-  padding: 16px 0;
+.button-container {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+  gap: 16px;
 }
 
-footer button {
-  background-color: white;
-  color: #674021;
+.nav-button {
+  flex: 1;
+  background-color: #674021;
+  color: white;
   border: none;
-  padding: 14px 20px;
+  border-radius: 12px;
+  padding: 14px;
   font-size: 1rem;
   font-family: 'ABeeZee', sans-serif;
-  border-radius: 16px;
   cursor: pointer;
-  box-shadow: 2px 2px 6px rgba(0,0,0,0.2);
-  min-width: 130px;
+  transition: background 0.3s ease;
 }
 
-footer button:hover {
-  background-color: #f1e6db;
+.nav-button:hover {
+  background-color: #54331b;
+}
+
+@media (max-width: 480px) {
+  .button-container {
+    flex-direction: column;
+  }
 }
