@@ -31,3 +31,14 @@ formData.append("urgency", urgency);
     console.error("Fehler beim Senden:", err);
   }
 });
+
+
+
+function bestätigeDatum() {
+  const selected = document.getElementById("start_date").value;
+  if (selected) {
+    alert("Datum & Uhrzeit übernommen: " + selected.replace("T", " um "));
+  } else {
+    alert("Bitte wähle ein Datum und eine Uhrzeit aus.");
+  }
+}

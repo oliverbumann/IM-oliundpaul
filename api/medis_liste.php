@@ -16,37 +16,23 @@ if (!$ausgewähltesDatum) {
     exit;
 }
 
-$datum = new DateTime($ausgewähltesDatum);
-$tag = $datum->format('Y-m-d');
+$tag = (new DateTime($ausgewähltesDatum))->format('Y-m-d');
 
-$stmt = $pdo->prepare("SELECT * FROM medications WHERE user_id = :uid");
-$stmt->execute([':uid' => $user_id]);
-$alleMedis = $stmt->fetchAll();
+$stmt = $pdo->prepare("
+  SELECT s.id AS schedule_id, s.time, s.taken, m.name
+  FROM schedules s
+  JOIN medications m ON s.medication_id = m.id
+  WHERE s.user_id = :uid AND s.date = :datum
+  ORDER BY s.time ASC
+");
+$stmt->execute([
+  ':uid' => $user_id,
+  ':datum' => $tag
+]);
 
-$anzeigeListe = [];
-
-foreach ($alleMedis as $m) {
-    $start = new DateTime($m['start_date']);
-    $diff = $start->diff($datum)->days;
-
-    if ($datum < $start) continue; // Startdatum liegt in der Zukunft
-
-    switch ($m['frequency']) {
-        case 'täglich':
-            $anzeigeListe[] = $m;
-            break;
-
-        case 'wöchentlich':
-            if ($diff % 7 === 0) $anzeigeListe[] = $m;
-            break;
-
-        case 'monatlich':
-            if ($start->format('d') === $datum->format('d')) $anzeigeListe[] = $m;
-            break;
-    }
-}
+$einträge = $stmt->fetchAll();
 
 echo json_encode([
-    'status' => 'success',
-    'medikamente' => $anzeigeListe
+  'status' => 'success',
+  'medikamente' => $einträge
 ]);
