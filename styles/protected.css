@@ -1,0 +1,104 @@
+/* protected.css */
+
+@import url('https://fonts.googleapis.com/css2?family=ABeeZee&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'ABeeZee', sans-serif;
+  background-color: #DABFA2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+/* Date Header Container */
+#date-header {
+  background-color: #674021;
+  color: white;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  padding: 20px;
+  width: 100%;
+  max-width: 480px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#heute-datum {
+  margin: 0;
+  font-size: 1.4rem;
+}
+
+#wochentage-liste {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+#wochentage-liste span {
+  background-color: #CBAF91;
+  color: white;
+  padding: 6px 10px;
+  border-radius: 50px;
+  font-size: 0.9rem;
+}
+
+/* Medikamentenliste */
+#medikamentenliste {
+  background-color: white;
+  width: 100%;
+  max-width: 480px;
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 80px;
+  box-sizing: border-box;
+}
+
+/* Headline */
+h3 {
+  font-size: 1.2rem;
+  margin: 0 0 10px 0;
+  color: #674021;
+  text-align: center;
+}
+
+/* Button Section */
+.button-row {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #674021;
+  display: flex;
+  justify-content: space-around;
+  padding: 16px;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.button-row a {
+  background-color: white;
+  color: #674021;
+  font-size: 1.3rem;
+  text-decoration: none;
+  font-family: 'ABeeZee', sans-serif;
+  padding: 14px 18px;
+  border-radius: 12px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+  min-width: 100px;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  #date-header, #medikamentenliste {
+    max-width: 600px;
+  }
+}

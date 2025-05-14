@@ -1,57 +1,31 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ich bin eine geschützte Seite!</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Startseite</title>
+  <link rel="stylesheet" href="styles/protected.css" />
+  <link href="https://fonts.googleapis.com/css2?family=ABeeZee&display=swap" rel="stylesheet" />
 </head>
 <body>
-    <p>eigentliche Seite</p>
 
+  <div id="date-header">
+    <h2 id="heute-datum">Dienstag, 29 April</h2>
+    <div id="wochentage-liste">
+      <span>Sa 26</span><span>So 27</span><span>Mo 28</span><span>Di 29</span><span>Mi 30</span><span>Do 1</span><span>Fr 2</span>
+    </div>
+  </div>
 
-    <p id="welcome-message"></p>
+  <h3>Medikamente für den Tag:</h3>
+  <div id="medikamentenliste">
+    <!-- Medikamenteneinträge werden hier dynamisch erzeugt -->
+  </div>
 
+  <div class="button-row">
+    <a href="medis_uebersicht.html">Icon</a>
+    <a href="medis_hinzufuegen.html">+</a>
+  </div>
 
-<button id="logout-button">Logout</button>
-
-
-
-<button onclick="window.location.href='medis_hinzufügen.html'">➕ Medikament hinzufügen</button>
-
-
-<!-- Button zur Medikamenten-Übersicht -->
-<button onclick="window.location.href='medis_uebersicht.html'">
-  Medikamente verwalten
-</button>
-
-
-
-<script src="protected.js"></script>
-
-
-
-
-
-
-
-<div id="date-header">
-  <h2 id="heute-datum"></h2>
-  <div id="wochentage-liste"></div>
-</div>
-
-
-
-
-
-
-<h3>Medikamente für den Tag:</h3>
-<div id="medikamentenliste"></div>
-
-
-
-
-
-
-
+  <script src="protected.js"></script>
 </body>
 </html>
