@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=ABeeZee&display=swap');
+
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+form {
+  flex: ;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: 'ABeeZee', sans-serif;
+  background-color: #DABFA2;
+}
+
+
+
+h1 {
+  background-color: #674021;
+  color: white;
+  padding: 24px;
+  width: 100%;
+  text-align: center;
+  margin: 0;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  font-size: 1.8rem;
+}
+
+
+form {
+  background-color: white;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  margin-top: 30px;
+  width: 90%;
+  max-width: 480px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+label {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #674021;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+  font-family: 'ABeeZee', sans-serif;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+
+#name {
+  border: 2px solid #674021; /* braune Linie */
+  border-radius: 10px;       /* abgerundete Ecken */
+  padding: 10px;             /* Abstand innen */
+}
+
+#frequency {
+  border: 2px solid #674021; /* braune Linie */
+  border-radius: 10px;       /* abgerundete Ecken */
+  padding: 10px;             /* Abstand innen */
+}
+
+#start_date {
+  border: 2px solid #674021; /* braune Linie */
+  border-radius: 10px;       /* abgerundete Ecken */
+  padding: 10px;             /* Abstand innen */
+}
+
+#urgency {
+  border: 2px solid #674021; /* braune Linie */
+  border-radius: 10px;       /* abgerundete Ecken */
+  padding: 10px;             /* Abstand innen */
+}
+
+
+
+#medForm {
+  max-width: 100%;
+}
+
+
+button[type="submit"],
+button[type="button"] {
+  background-color: #674021;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  padding: 12px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button[type="submit"]:hover,
+button[type="button"]:hover {
+  background-color: #54331b;
+}
+
+
+
+.footer {
+  background-color: #674021;
+  padding: 24px;
+  width: 100%;
+  text-align: center;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+}
+
+
+.footer-link {
+  background-color: white;
+  color: #674021;
+  padding: 12px 20px;
+  text-decoration: none;
+  border-radius: 12px;
+  font-weight: bold;
+  font-family: 'ABeeZee', sans-serif;
+  display: inline-block;
+}
+
