@@ -2,6 +2,9 @@
 
 @import url('https://fonts.googleapis.com/css2?family=ABeeZee&display=swap');
 
+
+
+
 body {
   margin: 0;
   padding: 0;
@@ -82,16 +85,20 @@ body {
   
 }
 
+#medikamentenliste {
+  box-shadow: none;
+}
+
+
+
 .medikamenten-box {
-  background-color: white;
   border-radius: 16px;
   padding: 16px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
   margin-bottom: 30px;
+  box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.2);
 }
 
 .medikamenten-box div {
-  margin-bottom: 10px;
 }
 
 .button-container {
@@ -168,5 +175,71 @@ body {
   display: flex;
   flex-direction: column;
   }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.medikamenten-inhalt {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: none;
+}
+
+.medikamenten-inhalt input[type="checkbox"] {
+  width: 28px;
+  height: 28px;
+  accent-color: #674021;
+  cursor: pointer;
+  flex-shrink: 0;
+  box-shadow: none;
+
 }
 
