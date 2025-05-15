@@ -56,6 +56,7 @@ body {
   justify-content: center;
   gap: 8px;
   margin-top: 12px;
+  
 }
 
 #wochentage-liste button {
@@ -78,6 +79,7 @@ body {
 
 #wochentage-liste button:hover {
   background-color: #e0d3b6;
+  
 }
 
 .medikamenten-box {
@@ -93,15 +95,21 @@ body {
 }
 
 .button-container {
+  width: calc(100% - 80px);
   display: flex;
   justify-content: space-between;
-  gap: 16px;
+  flex-direction: row;
+  z-index: 1500;
+  position: fixed;
+  bottom: 66px;
+  padding: 0 40px;
+  gap: 20px;
 }
 
 .nav-button {
   flex: 1;
-  background-color: #674021;
-  color: white;
+  background-color: white;
+  color: #674021;
   border: none;
   border-radius: 12px;
   padding: 14px;
@@ -109,14 +117,57 @@ body {
   font-family: 'ABeeZee', sans-serif;
   cursor: pointer;
   transition: background 0.3s ease;
+  width: 30%;
+  box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.2);
 }
 
 .nav-button:hover {
   background-color: #54331b;
 }
 
-@media (max-width: 480px) {
-  .button-container {
-    flex-direction: column;
+.icon-button {
+  height: 30px;
+}
+
+.text-button {
+  display: none;
+}
+
+
+#sticky-footer {
+  background-color: #674021;
+  color: white;
+  font-family: 'ABeeZee', sans-serif;
+  text-align: center;
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  z-index: 1000;
+  box-shadow: 0 -2px 5px rgba(0,0,0,0.2);
+}
+
+body {
+  padding-bottom: 60px; /* Platz für den Footer schaffen, damit nichts überlappt */
+}
+
+
+
+@media (min-width: 768px) {
+  .text-button {
+  display: flex;
+  flex-direction: column;
   }
 }
+  
+
+@media (min-width: 1024px) {
+  .text-button {
+  display: flex;
+  flex-direction: column;
+  }
+}
+
