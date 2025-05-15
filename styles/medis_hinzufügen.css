@@ -7,10 +7,6 @@ html, body {
   padding: 0;
 }
 
-form {
-  flex: ;
-}
-
 body {
   display: flex;
   flex-direction: column;
@@ -90,8 +86,6 @@ select {
   border-radius: 10px;       /* abgerundete Ecken */
   padding: 10px;             /* Abstand innen */
 }
-
-
 
 #medForm {
   max-width: 100%;

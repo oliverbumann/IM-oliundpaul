@@ -28,13 +28,11 @@ function generiereDatumsliste() {
   const datumAnzeigen = document.getElementById("heute-datum");
   const tageContainer = document.getElementById("wochentage-liste");
 
-  // Heutiges Datum anzeigen
   const wochentag = tageKurz[heute.getDay()];
   const tag = heute.getDate();
   const monat = monateLang[heute.getMonth()];
   datumAnzeigen.textContent = `Heute: ${wochentag}, ${tag}. ${monat}`;
 
-  // Nächste 7 Tage-Buttons generieren
   for (let i = 0; i < 7; i++) {
     const datum = new Date();
     datum.setDate(datum.getDate() + i);
@@ -51,7 +49,6 @@ function generiereDatumsliste() {
 
     tageContainer.appendChild(button);
 
-    // Heute automatisch laden
     if (i === 0) {
       ladeMedikamenteFür(button.dataset.datum);
     }
@@ -61,7 +58,7 @@ function generiereDatumsliste() {
 // Medikamente laden und anzeigen
 async function ladeMedikamenteFür(datum) {
   const container = document.getElementById("medikamentenliste");
-  container.innerHTML = ""; // Vorherige Einträge leeren
+  container.innerHTML = "";
 
   try {
     const res = await fetch(`api/medis_liste.php?datum=${datum}`);
@@ -70,7 +67,16 @@ async function ladeMedikamenteFür(datum) {
     if (data.status === "success" && data.medikamente.length > 0) {
       data.medikamente.forEach((entry) => {
         const box = document.createElement("div");
-        const zeit = entry.time?.slice(0, 5); // z. B. "08:00"
+        box.className = "medikamenten-box";
+
+        const zeit = entry.time?.slice(0, 5);
+
+        const inhalt = document.createElement("div");
+        inhalt.className = "medikamenten-inhalt";
+
+        const textDiv = document.createElement("div");
+        textDiv.className = "medikamenten-text";
+        textDiv.innerHTML = `<strong>${entry.name}</strong><br>um ${zeit}`;
 
         const checkbox = document.createElement("input");
         checkbox.type = "checkbox";
@@ -93,16 +99,9 @@ async function ladeMedikamenteFür(datum) {
           }
         });
 
-        box.innerHTML = `<strong>${entry.name}</strong><br>um ${zeit}`;
-        box.appendChild(document.createElement("br"));
-        box.appendChild(checkbox);
-
-        box.style.border = "1px solid #aaa";
-        box.style.padding = "10px";
-        box.style.marginBottom = "10px";
-        box.style.backgroundColor = entry.taken == 1 ? "#d4f7d4" : "white";
-        box.style.textDecoration = entry.taken == 1 ? "line-through" : "none";
-
+        inhalt.appendChild(textDiv);
+        inhalt.appendChild(checkbox);
+        box.appendChild(inhalt);
         container.appendChild(box);
       });
     } else {
@@ -116,16 +115,6 @@ async function ladeMedikamenteFür(datum) {
 
 // Beim Laden der Seite starten
 document.addEventListener("DOMContentLoaded", generiereDatumsliste);
-
-
-
-
-
-
-
-
-
-
 
 // Reminder‑Checker: alle 60 Sekunden
 setInterval(async () => {
@@ -148,43 +137,14 @@ setInterval(async () => {
   }
 }, 60000); // alle 60 Sekunden
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// Logout-Button
 document.getElementById("logout-button").addEventListener("click", async () => {
   try {
     const res = await fetch("api/logout.php");
     const data = await res.json();
 
     if (data.status === "success") {
-      window.location.href = "login.html"; // zurück zur Login-Seite
+      window.location.href = "login.html";
     }
   } catch (err) {
     console.error("Fehler beim Logout:", err);
