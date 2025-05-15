@@ -1,20 +1,40 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8" />
-  <title>Meine Medikamente</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ich bin eine geschützte Seite!</title>
   <link rel="stylesheet" href="styles/uebersicht.css">
-  <script src="medis_uebersicht.js" defer></script>
+  
+
 </head>
 <body>
-
+  
+  <div id="date-header" class="date-box">
+      <h2 id="Medikamente einsehen und löschen"></h2>
+      
+    </div>
   <h1>Medikamente einsehen und löschen</h1>
 
   <div id="mediliste">Lade Daten…</div>
 
-  <div class="footer">
-    <a href="protected.html">Zurück zur Startseite</a>
-  </div>
+<div class="button-container">
+      <button class="nav-button" onclick="window.location.href='medis_hinzufügen.html'">
+        <img class="icon-button" src="/images/icon-plus.svg" alt="Hinzufügen">
+        <p class="text-button">Medikament hinzufügen</p>
+      </button>
+      <button class="nav-button" onclick="window.location.href='protected.html'">
+        <img class="icon-button" src="/images/icon-lupe.svg" alt="Lupe">
+        <p class="text-button">Medikamente verwalten</p>
+      </button>
+    </div>
 
+<footer id="sticky-footer">
+  
+  
+</footer> 
+
+
+  <script src="protected.js"></script>
 </body>
 </html>
