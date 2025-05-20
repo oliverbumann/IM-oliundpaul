@@ -68,6 +68,8 @@ async function ladeMedikamenteFür(datum) {
       data.medikamente.forEach((entry) => {
         const box = document.createElement("div");
         box.className = "medikamenten-box";
+        box.style.backgroundColor = "white";
+
 
         const zeit = entry.time?.slice(0, 5);
 
@@ -81,6 +83,13 @@ async function ladeMedikamenteFür(datum) {
         const checkbox = document.createElement("input");
         checkbox.type = "checkbox";
         checkbox.checked = entry.taken == 1;
+
+        // ✔ Styling beim ersten Laden anwenden:
+        if (checkbox.checked) {
+          box.style.backgroundColor = "#d4f7d4";
+          box.style.textDecoration = "line-through";
+      }
+
 
         checkbox.addEventListener("change", async () => {
           try {

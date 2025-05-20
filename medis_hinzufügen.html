@@ -2,47 +2,49 @@
 <html lang="de">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Medikament hinzufügen</title>
   <script src="medis_hinzufügen.js" defer></script>
   <link rel="stylesheet" href="styles/medis_hinzufügen.css">
-
 </head>
 <body>
+  <div class="page-wrapper">
 
-  <h1>Neues Medikament hinzufügen</h1>
+    <header>
+      <h1>Neues Medikament hinzufügen</h1>
+    </header>
 
-  <form id="medForm">
-  <label for="name">Medikamentenname:</label>
-  <input type="text" id="name" required />
+    <main class="content">
+      <form id="medForm">
+        <label for="name">Medikamentenname:</label>
+        <input type="text" id="name" required />
 
-  <label for="frequency">Frequenz:</label>
-  <select id="frequency" required>
-    <option value="täglich">täglich</option>
-    <option value="wöchentlich">wöchentlich</option>
-    <option value="monatlich">monatlich</option>
-  </select>
+        <label for="frequency">Frequenz:</label>
+        <select id="frequency" required>
+          <option value="täglich">täglich</option>
+          <option value="wöchentlich">wöchentlich</option>
+          <option value="monatlich">monatlich</option>
+        </select>
 
-  <label for="start_date">Startdatum & Uhrzeit:</label>
-  <input type="datetime-local" id="start_date" required />
-  <label for="urgency">Einzunehmen innerhalb von:</label>
-  <select id="urgency" required>
-    <option value="egal">egal</option>
-    <option value="1h">innerhalb 1h</option>
-    <option value="2h">innerhalb 2h</option>
-    <option value="3h">innerhalb 3h</option>
-  </select>
+        <label for="start_date">Startdatum & Uhrzeit:</label>
+        <input type="datetime-local" id="start_date" required />
 
-  <button type="submit">Medikament speichern</button>
+        <label for="urgency">Einzunehmen innerhalb von:</label>
+        <select id="urgency" required>
+          <option value="egal">egal</option>
+          <option value="1h">innerhalb 1h</option>
+          <option value="2h">innerhalb 2h</option>
+          <option value="3h">innerhalb 3h</option>
+        </select>
 
+        <button type="submit">Medikament speichern</button>
+      </form>
+    </main>
 
-</form>
+    <footer class="footer">
+      <a href="protected.html" class="footer-link">Zurück zur Startseite</a>
+    </footer>
 
-
-<!-- Fusszeile mit Zurück-Button -->
-<footer class="footer">
-    <a href="protected.html" class="footer-link">Zurück zur Startseite</a>
-  </footer>
-
-
+  </div>
 </body>
 </html>
