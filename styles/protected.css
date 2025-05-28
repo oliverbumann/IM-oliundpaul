@@ -2,29 +2,34 @@
 
 @import url('https://fonts.googleapis.com/css2?family=ABeeZee&display=swap');
 
-
-
-
+/* ---------- Grundlayout ---------- */
 body {
   margin: 0;
   padding: 0;
   font-family: 'ABeeZee', sans-serif;
   background-color: #DABFA2;
   min-height: 100vh;
+  padding-bottom: 60px; /* Platz für Footer */
 }
 
+#heute-datum {
+  text-align: center;
+  margin: 0;
+  width: 100%;
+}
+
+/* ---------- Container ---------- */
 .container {
   padding: 20px;
   max-width: 600px;
   margin: 0 auto;
-  margin-top: 0px;
+  margin-top: 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
-
-
+/* ---------- Willkommensnachricht ---------- */
 #welcome-message {
   font-size: 1.2rem;
   margin-bottom: 20px;
@@ -32,6 +37,7 @@ body {
   font-weight: bold;
 }
 
+/* ---------- Logout-Button ---------- */
 #logout-button {
   background-color: #674021;
   color: white;
@@ -44,6 +50,7 @@ body {
   cursor: pointer;
 }
 
+/* ---------- Datumskopf ---------- */
 .date-box {
   background-color: #674021;
   color: white;
@@ -51,26 +58,24 @@ body {
   border-bottom-right-radius: 40px;
   padding: 16px;
   margin-bottom: 20px;
-  box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.2);
-  
-  
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.2);
 }
 
+/* ---------- Wochentage-Buttons ---------- */
 #wochentage-liste {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 8px;
   margin-top: 12px;
-  
 }
 
 #wochentage-liste button {
   background-color: white;
   color: #674021;
   border: none;
-  border-radius: 50%; /* macht ihn rund */
-  width: 40px;         /* gleiche Höhe und Breite */
+  border-radius: 50%;
+  width: 40px;
   height: 40px;
   font-size: 1rem;
   font-weight: bold;
@@ -79,112 +84,24 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 30px; /* Padding entfernen, um die runde Form nicht zu verzerren */
+  padding: 30px; /* verhindert Verzerrung */
 }
-
 
 #wochentage-liste button:hover {
   background-color: #e0d3b6;
-  
 }
 
+/* ---------- Medikamentenliste ---------- */
 #medikamentenliste {
   box-shadow: none;
 }
-
-
 
 .medikamenten-box {
   border-radius: 16px;
   padding: 16px;
   margin-bottom: 30px;
-  box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.2);
 }
-
-.button-container {
-  width: calc(100% - 80px);
-  display: flex;
-  justify-content: space-between;
-  flex-direction: row;
-  z-index: 1500;
-  position: fixed;
-  bottom: 66px;
-  padding: 0 40px;
-  gap: 20px;
-}
-
-.nav-button {
-  flex: 1;
-  background-color: white;
-  color: #674021;
-  border: none;
-  border-radius: 12px;
-  padding: 14px;
-  font-size: 1rem;
-  font-family: 'ABeeZee', sans-serif;
-  cursor: pointer;
-  transition: background 0.3s ease;
-  width: 30%;
-  box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.2);
-}
-
-.nav-button:hover {
-  background-color: #d6c9be;
-}
-
-.icon-button {
-  height: 30px;
-}
-
-.text-button {
-  display: none;
-}
-
-#sticky-footer {
-  background-color: #674021;
-  color: white;
-  font-family: 'ABeeZee', sans-serif;
-  text-align: center;
-  border-top-left-radius: 40px;
-  border-top-right-radius: 40px;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 100px;
-  z-index: 1000;
-  box-shadow: 0 -2px 5px rgba(0,0,0,0.2);
-}
-
-body {
-  padding-bottom: 60px; /* Platz für den Footer schaffen, damit nichts überlappt */
-}
-
-#heute-datum {
-  text-align: center;
-  margin: 0;
-  width: 100%;
-}
-
-
-
-
-
-  
-
-@media (min-width: 1024px) {
-  .text-button {
-  display: flex;
-  flex-direction: column;
-  }
-}
-
-
-
-
-
-
-
 
 .medikamenten-inhalt {
   display: flex;
@@ -200,6 +117,69 @@ body {
   cursor: pointer;
   flex-shrink: 0;
   box-shadow: none;
-
 }
 
+/* ---------- Button-Container ---------- */
+.button-container {
+  width: calc(100% - 80px);
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  position: fixed;
+  bottom: 66px;
+  padding: 0 40px;
+  gap: 20px;
+  z-index: 1500;
+}
+
+.nav-button {
+  flex: 1;
+  background-color: white;
+  color: #674021;
+  border: none;
+  border-radius: 12px;
+  padding: 14px;
+  font-size: 1rem;
+  font-family: 'ABeeZee', sans-serif;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  width: 30%;
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.2);
+}
+
+.nav-button:hover {
+  background-color: #d6c9be;
+}
+
+.icon-button {
+  height: 30px;
+}
+
+.text-button {
+  display: none;
+}
+
+/* ---------- Fusszeile ---------- */
+#sticky-footer {
+  background-color: #674021;
+  color: white;
+  font-family: 'ABeeZee', sans-serif;
+  text-align: center;
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  z-index: 1000;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* ---------- Responsive: Text unter Icons ---------- */
+@media (min-width: 1024px) {
+  .text-button {
+    display: flex;
+    flex-direction: column;
+  }
+}

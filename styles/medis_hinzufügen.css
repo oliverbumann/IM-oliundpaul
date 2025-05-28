@@ -1,9 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=ABeeZee&display=swap');
 
-.input {
-  box-sizing: border-box;
-}
-
+/* ---------- Grundlayout ---------- */
 html, body {
   height: 100%;
   margin: 0;
@@ -14,13 +11,18 @@ html, body {
   flex-direction: column;
 }
 
+.input {
+  box-sizing: border-box;
+}
+
+/* ---------- Wrapper ---------- */
 .page-wrapper {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
 }
 
-/* Header / Titel */
+/* ---------- Header / Titel ---------- */
 header h1 {
   background-color: #674021;
   color: white;
@@ -32,7 +34,7 @@ header h1 {
   font-size: 1.8rem;
 }
 
-/* Hauptinhalt (Formularbereich) */
+/* ---------- Hauptinhalt (Formularbereich) ---------- */
 .content {
   flex: 1;
   display: flex;
@@ -41,7 +43,7 @@ header h1 {
   padding: 30px 20px;
 }
 
-/* Formular-Styling */
+/* ---------- Formular ---------- */
 form {
   background-color: white;
   padding: 30px;
@@ -71,7 +73,7 @@ select {
   font-size: 1rem;
 }
 
-/* Buttons */
+/* ---------- Submit-Button ---------- */
 button[type="submit"] {
   background-color: #674021;
   color: white;
@@ -87,6 +89,7 @@ button[type="submit"]:hover {
   background-color: #54331b;
 }
 
+/* ---------- Footer-Navigation ---------- */
 .button-container {
   width: calc(100% - 80px);
   display: flex;
@@ -126,6 +129,7 @@ button[type="submit"]:hover {
   display: none;
 }
 
+/* ---------- Footer ---------- */
 #sticky-footer {
   background-color: #674021;
   color: white;
@@ -142,9 +146,10 @@ button[type="submit"]:hover {
   box-shadow: 0 -2px 5px rgba(0,0,0,0.2);
 }
 
+/* ---------- Media Queries ---------- */
 @media (min-width: 1024px) {
   .text-button {
-  display: flex;
-  flex-direction: column;
+    display: flex;
+    flex-direction: column;
   }
 }
