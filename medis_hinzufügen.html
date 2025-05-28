@@ -17,7 +17,7 @@
     <main class="content">
       <form id="medForm">
         <label for="name">Medikamentenname:</label>
-        <input type="text" id="name" required />
+        <input type="text" id="name" class="input" required />
 
         <label for="frequency">Frequenz:</label>
         <select id="frequency" required>
@@ -27,7 +27,7 @@
         </select>
 
         <label for="start_date">Startdatum & Uhrzeit:</label>
-        <input type="datetime-local" id="start_date" required />
+        <input type="datetime-local" id="start_date" class="input" required />
 
         <label for="urgency">Einzunehmen innerhalb von:</label>
         <select id="urgency" required>
@@ -44,7 +44,7 @@
     <div class="button-container">
       <button class="nav-button" onclick="window.location.href='protected.html'">
         <img class="icon-button" src="/images/Icon house.svg" alt="Startseite">
-        <p class="text-button">Medikament hinzufügen</p>
+        <p class="text-button">Startseite</p>
       </button>
       <button class="nav-button" onclick="window.location.href='medis_uebersicht.html'">
         <img class="icon-button" src="/images/icon-lupe.svg" alt="Lupe">
