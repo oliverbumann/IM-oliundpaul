@@ -1,17 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=ABeeZee&display=swap');
 
+/* ---------- Grundlayout ---------- */
 body {
   margin: 0;
   padding: 0;
   font-family: 'ABeeZee', sans-serif;
   background-color: #DABFA2;
   min-height: 100vh;
-  display: flex;              /* Flexbox für Zentrierung */
-  flex-direction: column;     /* Inhalt in Spaltenrichtung */
-  align-items: center;        /* Inhalt horizontal zentrieren */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 120px; /* Platz für den Footer schaffen */
 }
 
-/* Überschrift */
 h1 {
   color: white;
   font-size: 1.6rem;
@@ -20,7 +21,7 @@ h1 {
   width: 100%;
 }
 
-/* Brauner Balken mit Überschrift */
+/* ---------- Brauner Balken mit Überschrift ---------- */
 .date-box {
   background-color: #674021;
   color: white;
@@ -33,15 +34,14 @@ h1 {
   box-sizing: border-box;
 }
 
-/* Container für die Medikamentenliste */
+/* ---------- Medikamentenliste ---------- */
 #mediliste {
-  margin: 20px auto 0 auto;  /* Zentrierung */
+  margin: 20px auto 0 auto;
   max-width: 600px;
   width: 90%;
   box-sizing: border-box;
 }
 
-/* Box für jedes Medikament */
 .medi-box {
   background-color: white;
   border-radius: 16px;
@@ -59,7 +59,7 @@ h1 {
   color: #674021;
 }
 
-/* Löschen-Button */
+/* ---------- Löschen-Button ---------- */
 .delete-btn {
   background-color: #674021;
   color: white;
@@ -76,7 +76,7 @@ h1 {
   background-color: #54331b;
 }
 
-/* Button-Container unten */
+/* ---------- Button-Container unten ---------- */
 .button-container {
   width: 100%;
   display: flex;
@@ -88,7 +88,6 @@ h1 {
   gap: 20px;
   box-sizing: border-box;
 }
-
 
 .nav-button {
   flex: 1;
@@ -116,7 +115,7 @@ h1 {
   display: none;
 }
 
-/* Fusszeile */
+/* ---------- Fusszeile ---------- */
 #sticky-footer {
   background-color: #674021;
   color: white;
@@ -133,12 +132,7 @@ h1 {
   box-shadow: 0 -2px 5px rgba(0,0,0,0.2);
 }
 
-/* Platz für Footer schaffen */
-body {
-  padding-bottom: 120px; /* 100px Footer + etwas Puffer */
-}
-
-/* Responsive: Text unter Icons anzeigen */
+/* ---------- Responsive: Text unter Icons ---------- */
 @media (min-width: 768px) {
   .text-button {
     display: flex;

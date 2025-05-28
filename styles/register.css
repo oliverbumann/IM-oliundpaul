@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=ABeeZee&display=swap');
 
+/* ---------- Grundlayout ---------- */
 body {
   margin: 0;
   padding: 0;
@@ -20,6 +21,7 @@ h1 {
   width: 100%;
 }
 
+/* ---------- Formularcontainer ---------- */
 #registerForm {
   width: 100%;
   display: flex;
@@ -40,6 +42,7 @@ h1 {
   margin: 20px;
 }
 
+/* ---------- Formularinhalte ---------- */
 label {
   display: block;
   margin-bottom: 10px;
@@ -60,6 +63,7 @@ input {
   margin-bottom: 16px;
 }
 
+/* ---------- Buttons ---------- */
 #brown-button {
   background-color: #674021;
   color: white;
@@ -97,8 +101,7 @@ input {
   background-color: #54331b;
 }
 
-/* -------------------- Media Queries -------------------- */
-
+/* ---------- Media Queries ---------- */
 @media (min-width: 768px) {
   .form-box {
     width: 60%;
