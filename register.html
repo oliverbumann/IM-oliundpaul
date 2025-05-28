@@ -1,41 +1,34 @@
 <!DOCTYPE html>
 <html lang="de">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Registrierung</title>
-    <link rel="stylesheet" href="styles/register.css" />
-    <link href="https://fonts.googleapis.com/css2?family=ABeeZee&display=swap" rel="stylesheet" />
-  </head>
-  <body>
-    
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Registrierung</title>
+  <link rel="stylesheet" href="styles/register.css" />
+  <link href="https://fonts.googleapis.com/css2?family=ABeeZee&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <form id="registerForm" action="">
+    <div class="form-box">
+      <h1>Jetzt Registrieren für Medicus!</h1>
 
-      <form id="registerForm" action="">
-  <div class="form-box">
-    <h1>Jetzt Registrieren für Medicus!</h1>
+      <label for="email">Email:</label>
+      <input id="email" type="email" placeholder="max.muster@gmx.ch" required />
 
-    <label for="email">Email</label>
-    <input id="email" type="email" placeholder="max.muster@gmx.ch" required />
-    <br /><br />
+      <label for="username">Benutzername:</label>
+      <input id="username" type="text" placeholder="Benutzername" required />
 
-    <label for="username">Username</label>
-    <input id="username" type="text" placeholder="Benutzername" required />
-    <br /><br />
+      <label for="password">Passwort:</label>
+      <input id="password" type="password" placeholder="Passwort" required />
 
-    <label for="password">Passwort</label>
-    <input id="password" type="password" placeholder="Passwort" required />
-    <br /><br />
+      <label for="passwordRepeat">Passwort wiederholen:</label>
+      <input id="passwordRepeat" type="password" placeholder="Passwort wiederholen" required />
 
-    <label for="passwordRepeat">Passwort wiederholen</label>
-    <input id="passwordRepeat" type="password" placeholder="Passwort" required />
-    <br /><br />
+      <button id="brown-button" type="submit">Registrieren</button>
+      <a href="login.html" id="brown-link-button">Einloggen</a>
+    </div>
+  </form>
 
-    <button id="brown-button" type="submit">Registrieren</button>
-    <a href="login.html" id="brown-link-button">Einloggen</a>
-  </div>
-</form>
-    
-
-    <script src="register.js"></script>
-  </body>
+  <script src="register.js"></script>
+</body>
 </html>

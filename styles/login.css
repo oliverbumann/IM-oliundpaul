@@ -1,5 +1,3 @@
-/* login.css - identical to register.css for consistent design */
-
 @import url('https://fonts.googleapis.com/css2?family=ABeeZee&display=swap');
 
 body {
@@ -8,10 +6,10 @@ body {
   font-family: 'ABeeZee', sans-serif;
   background: url('../images/pillen hg.png') no-repeat center center fixed;
   background-size: cover;
+  display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  display: flex;
+  min-height: 100vh; /* Sicherstellung der vertikalen Zentrierung */
 }
 
 h1 {
@@ -24,17 +22,22 @@ h1 {
 
 #loginForm {
   width: 100%;
-  margin: 20px;
+  display: flex;
+  justify-content: center; /* zentriert das Formular */
+  align-items: center;
 }
 
 .form-box {
-  background-color: rgba(203, 175, 145, 0.9); /* #CBAF91 with opacity */
+  background-color: rgba(203, 175, 145, 0.9); /* #CBAF91 mit Transparenz */
   border-radius: 20px;
   padding: 20px;
   box-sizing: border-box;
+  display: flex;
   flex-direction: column;
   align-items: center;
-  display: flex;
+  width: 100%;
+  max-width: 400px; /* Initiale Maximalbreite für Mobilgeräte */
+  margin: 20px; /* Zentriert das Formular horizontal */
 }
 
 label {
@@ -54,6 +57,7 @@ input {
   font-family: 'ABeeZee', sans-serif;
   font-size: 1rem;
   box-sizing: border-box;
+  margin-bottom: 16px;
 }
 
 #brown-button {
@@ -67,6 +71,7 @@ input {
   font-family: 'ABeeZee', sans-serif;
   cursor: pointer;
   margin-bottom: 12px;
+  transition: background 0.3s ease;
 }
 
 #brown-button:hover {
@@ -92,20 +97,27 @@ input {
   background-color: #54331b;
 }
 
+/* -------------------- Media Queries -------------------- */
+
 @media (min-width: 768px) {
   .form-box {
+    width: 60%;
+    max-width: 500px;
     padding: 30px;
     border-radius: 24px;
   }
+
   h1 {
     font-size: 2rem;
   }
 }
 
 @media (min-width: 1024px) {
-  body {
-    background-attachment: fixed;
+  .form-box {
+    width: 40%;
+    max-width: none; /* Optional: entferne Begrenzung, wenn du mehr Freiheit willst */
   }
+
   h1 {
     font-size: 2.2rem;
   }
