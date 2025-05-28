@@ -79,11 +79,15 @@ Designprinzipien für ältere Menschen:
 
 Technische Hinweise:
 
-    Backend: Speicherung der Nutzerdaten und Medikamenteninformationen erfolgt über eine Datenbank (z. B. MongoDB, MySQL oder Firebase – je nach Implementierung).
+    Backend: Speicherung der Nutzerdaten und Medikamenteninformationen erfolgt über eine Datenbank (MySQL).
 
     Reminder-Logik: Reminder werden über eine serverseitige Logik mit Timern und Benachrichtigungen umgesetzt.
 
     Verzögerung bei Benachrichtigungen: Bitte beachten: Aufgrund der Latenzzeit des Servers können Erinnerungen bis zu 5 Minuten verzögert erscheinen.
+
+    Validierungsprozess:
+    Wir haben unseren Code validiert. Sämtliche Errors wurden eliminiert ausser bei den Navigationsbuttons wird ein "p" tag nicht akzeptiert. Dies konnten wir leider nicht lösen.
+
 
 
 
