@@ -8,15 +8,19 @@ async function ladeMedikamente() {
   try {
     const res = await fetch("api/medis_uebersicht.php");
     const data = await res.json();
+    console.log("Antwort vom Server:", data); // Zum Debuggen
 
-    if (data.status === "success" && data.medikamente.length > 0) {
+    if (data.status === "success" && data.medikamente && data.medikamente.length > 0) {
       data.medikamente.forEach(medi => {
         const box = document.createElement("div");
         box.className = "medi-box";
 
+        // Fehler vermeiden, falls start_time null ist
+        const startTime = medi.start_time ? medi.start_time.slice(0, 5) : "unbekannt";
+
         box.innerHTML = `
           <strong>${medi.name}</strong><br>
-          Start: ${medi.start_date} um ${medi.start_time.slice(0, 5)}<br>
+          Start: ${medi.start_date} um ${startTime}<br>
           Häufigkeit: ${medi.frequency}<br>
           Zeitkritisch: ${medi.urgency}<br>
           <button class="delete-btn" data-id="${medi.id}">❌ Entfernen</button>
@@ -37,7 +41,7 @@ async function ladeMedikamente() {
       });
 
     } else {
-      container.textContent = "Keine zukünftigen Medikamente gefunden.";
+      container.textContent = "Keine Medikamente gefunden.";
     }
 
   } catch (err) {
