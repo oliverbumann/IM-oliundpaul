@@ -126,7 +126,7 @@ body {
 }
 
 .nav-button:hover {
-  background-color: #54331b;
+  background-color: #d6c9be;
 }
 
 .icon-button {
@@ -159,12 +159,7 @@ body {
 
 
 
-@media (min-width: 768px) {
-  .text-button {
-  display: flex;
-  flex-direction: column;
-  }
-}
+
   
 
 @media (min-width: 1024px) {
@@ -173,48 +168,6 @@ body {
   flex-direction: column;
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
